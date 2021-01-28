@@ -1,0 +1,14 @@
+.container {
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+.navbar {
+    text-align: center;
+    padding: 20px;
+}
+
+.navlink {
+    padding: 10px;
+}
