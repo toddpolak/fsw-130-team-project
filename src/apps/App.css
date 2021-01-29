@@ -1,15 +1,16 @@
-
-/*
-
 .container {
     width: 600px;
-    border: 1px solid black;
+    border: 1px solid #333;
+    padding: 20px;
     margin: auto;
 }
 
 .navbar {
     text-align: center;
-    padding: 20px;
+    width: 260px;
+    border: 1px solid #333;
+    padding: 10px;
+    margin: auto;
 }
 
 .navlink {
@@ -17,22 +18,13 @@
 }
 
 form {
-    width: 400px;
-    background-color: lightslategrey;
+    text-align: center;
+    width: 310px;
     border: 1px solid #333;
     padding: 10px;
     margin: auto;
 }
 
-.display-list {
-    width: 400px;
-    border: 1px solid black;
-    padding: 10px;
-    margin: auto;
+input[type='text'] {
+    width: 260px;
 }
-
-.page-content {
-    text-align: center;
-}
-
-*/

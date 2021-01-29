@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { addMovie } from '../redux/movies'
 
-function Movies({ dispatch, movies }) {
+function Movies({ dispatch, store }) {
 
     const initInput = {
         title: ''
@@ -25,7 +25,7 @@ function Movies({ dispatch, movies }) {
     return (
         <div>
             <h1>Movies Page</h1>
-            <h4>Project 3: Movies & TV with Redux (React)</h4>
+            <h3>Project 3: Movies & TV with Redux (React)</h3>
                 <form onSubmit={handleSubmit}>
                     <input
                         type='text'
@@ -33,21 +33,19 @@ function Movies({ dispatch, movies }) {
                         value={input.title}
                         onChange={handleChange}
                         placeholder='Movie Title' />
-                    <button>Add Movie</button>
+                    <button>Add</button>
                 </form>
-
                 <div>
-                    {movies.map((movie, index) =>
-                            <div key={index}>{movie.title}</div>
-                        )
-                    }
+                {store.movies.map((movie, index) =>
+                    <div key={index}>{movie.title}</div>
+                )}
                 </div>
          </div>
     )
 }
 
 const mapStateToProps = state => {
-    return { movies: state }
+    return { store: state }
 }
 
 export default connect(mapStateToProps)(Movies)
