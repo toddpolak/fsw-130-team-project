@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import store from './redux'
 import App from './apps/App';
 import './apps/App.css'
+import './imgs-fonts/ShadowsIntoLight-Regular.ttf'; 
 
 ReactDOM.render(
     <Provider store={store}>

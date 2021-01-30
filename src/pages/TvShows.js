@@ -24,8 +24,8 @@ function TvShows({ dispatch, store }) {
 
     return (
         <div>
-            <h1>TV Shows Page</h1>
-            <h3>Project 3: Movies & TV with Redux (React)</h3>
+            <h1>TV Shows</h1>
+            <p>Add your Tv Show below</p>
             <form onSubmit={handleSubmit}>
                 <input
                     type='text'
