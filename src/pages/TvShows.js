@@ -18,8 +18,11 @@ function TvShows({ dispatch, store }) {
 
     function handleSubmit(e) {
         e.preventDefault()
-        dispatch(addTvShow(input))
-        setInput(initInput)
+
+        if (input.title !== '') {
+            dispatch(addTvShow(input))
+            setInput(initInput)
+        }
     }
 
     return (
@@ -38,8 +41,8 @@ function TvShows({ dispatch, store }) {
             <div className='display-list'>
                 {store.tvShows.map((tvShow, index) =>
                     <div key={index}>
-                        <div>{tvShow.title}</div>
-                        <div>
+                        <div className='display-item'>{tvShow.title}</div>
+                        <div className='delete-btn'>
                             <button onClick={() => {dispatch(deleteTvShow(index))}}>
                                     Delete
                             </button>
