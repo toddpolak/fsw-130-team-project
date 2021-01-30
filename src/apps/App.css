@@ -112,6 +112,18 @@ button {
     text-align: center; 
     font-family: 'Architects Daughter', cursive;
     font-size: 20px; 
-    margin: auto; 
+    margin: auto;
+    width: 550px;
 }
 
+.display-item {
+    display: inline-block;
+    width: 400px;
+    padding: 5px;
+}
+
+.delete-btn {
+    display: inline-block;
+    width: 100px;
+    padding: 5px;
+}

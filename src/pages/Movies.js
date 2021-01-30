@@ -18,8 +18,11 @@ function Movies({ dispatch, store }) {
 
     function handleSubmit(e) {
         e.preventDefault()
-        dispatch(addMovie(input))
-        setInput(initInput)
+
+        if (input.title !== '') {
+            dispatch(addMovie(input))
+            setInput(initInput)
+        }
     }
 
     return (
@@ -38,8 +41,8 @@ function Movies({ dispatch, store }) {
                 <div className='display-list'>
                 {store.movies.map((movie, index) =>
                     <div key={index}>
-                        <div>{movie.title}</div>
-                        <div>
+                        <div className='display-item'>{movie.title}</div>
+                        <div className='delete-btn'>
                             <button onClick={() => { dispatch(deleteMovie(index)) }}>
                                 Delete
                             </button>
