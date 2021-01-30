@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { addMovie } from '../redux/movies'
+import { addMovie, deleteMovie } from '../redux/movies'
 
 function Movies({ dispatch, store }) {
 
@@ -35,9 +35,16 @@ function Movies({ dispatch, store }) {
                         placeholder='Movie Title' />
                     <button>Add</button>
                 </form>
-                <div>
+                <div className='display-list'>
                 {store.movies.map((movie, index) =>
-                    <div key={index}>{movie.title}</div>
+                    <div key={index}>
+                        <div>{movie.title}</div>
+                        <div>
+                            <button onClick={() => { dispatch(deleteMovie(index)) }}>
+                                Delete
+                            </button>
+                        </div>
+                    </div>
                 )}
                 </div>
          </div>
