@@ -28,3 +28,7 @@ form {
 input[type='text'] {
     width: 260px;
 }
+
+.display-list {
+    padding: 20px;
+}

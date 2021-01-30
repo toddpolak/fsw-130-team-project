@@ -5,10 +5,10 @@ export function addMovie(movie) {
     }
 }
 
-export function deleteTvMovie(movie) {
+export function deleteMovie(index) {
     return {
         type: 'DELETE_MOVIE',
-        payload: movie
+        payload: index
     }
 }
 
@@ -17,7 +17,7 @@ export default function moviesReducer(movies = [], action) {
         case 'ADD_MOVIE':
             return movies = [...movies, action.payload]
         case 'DELETE_MOVIE':
-            const updatedMovies = movies.filter(movie => movie !== action.payload)
+            const updatedMovies = movies.filter((movie, index) => index !== action.payload)
             return movies = updatedMovies
         default: 
             return movies

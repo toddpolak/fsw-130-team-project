@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { addTvShow } from '../redux/tvShows'
+import { addTvShow, deleteTvShow } from '../redux/tvShows'
 
 function TvShows({ dispatch, store }) {
 
@@ -35,9 +35,16 @@ function TvShows({ dispatch, store }) {
                     placeholder='TV Show' />
                 <button>Add</button>
             </form>
-            <div>
+            <div className='display-list'>
                 {store.tvShows.map((tvShow, index) =>
-                    <div key={index}>{tvShow.title}</div>
+                    <div key={index}>
+                        <div>{tvShow.title}</div>
+                        <div>
+                            <button onClick={() => {dispatch(deleteTvShow(index))}}>
+                                    Delete
+                            </button>
+                        </div>
+                    </div>
                 )}
             </div>
         </div>
