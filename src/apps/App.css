@@ -1,34 +1,117 @@
+@font-face {
+    font-family: 'Shadows Into Light', cursive;
+    src: local('Shadows Into Light'),
+      url("../imgs-fonts/ShadowsIntoLight-Regular.ttf") format("truetype");
+    font-weight: normal;
+  }
+
 .container {
-    width: 600px;
-    border: 1px solid #333;
-    padding: 20px;
+    display: grid;  
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;      
+    padding: 10px;
     margin: auto;
+    align-content: center;
+}
+
+.header {
+    display: grid; 
+    grid-column: 2/3;
+}
+
+.list {
+    display: grid; 
+    grid-column: 2/3;
+}
+
+.logo {
+    display: grid; 
+    width: 600px; 
+    height: 600px;   
+    background-image: url(../imgs-fonts/movieapps.jpg);
+    grid-column: 2/3;
 }
 
 .navbar {
     text-align: center;
-    width: 260px;
-    border: 1px solid #333;
+    width: 400px;
     padding: 10px;
     margin: auto;
 }
 
 .navlink {
     padding: 10px;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 25px; 
+    margin: 10px; 
+}
+
+h1 {
+    text-align: center; 
+    font-size: 30px; 
+    font-family: 'Architects Daughter', cursive;
+
+}
+
+h3, p {
+    text-align: center; 
+    font-family: 'Architects Daughter', cursive;
+    font-size: 20px; 
+
+}
+
+ul {
+    text-align: center; 
+    font-size: 15px; 
+}
+
+li {
+    list-style-type: none; 
+    font-family: 'Architects Daughter', cursive;
+    font-size: 15px; 
 }
 
 form {
     text-align: center;
     width: 310px;
-    border: 1px solid #333;
     padding: 10px;
     margin: auto;
+    font-family: 'Architects Daughter', cursive;
 }
 
 input[type='text'] {
     width: 260px;
+    border-radius: 10px;
+    background-color: #5EB2FA;
+    height: 30px; 
+    padding: 10px; 
+    border-color: black; 
+    font-family: 'Architects Daughter', cursive;
+    margin: 10px; 
+    text-align: center; 
+    color: white; 
+    text-decoration-color: white;
+}
+
+button {
+    width: 70px; 
+    height: 50px; 
+    border-radius: 10px;
+    background-color: #5EB2FA;
+    height: 30px; 
+    padding: 10px; 
+    border-color: black; 
+    font-family: 'Architects Daughter', cursive;
+    margin: 10px; 
+    text-align: center; 
+    color: white;  
 }
 
 .display-list {
-    padding: 20px;
+    padding: 10px;
+    text-align: center; 
+    font-family: 'Architects Daughter', cursive;
+    font-size: 20px; 
+    margin: auto; 
 }
+

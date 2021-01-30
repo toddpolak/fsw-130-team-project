@@ -24,8 +24,8 @@ function Movies({ dispatch, store }) {
 
     return (
         <div>
-            <h1>Movies Page</h1>
-            <h3>Project 3: Movies & TV with Redux (React)</h3>
+            <h1>Movies</h1>
+            <p>Add your movie below</p>
                 <form onSubmit={handleSubmit}>
                     <input
                         type='text'
